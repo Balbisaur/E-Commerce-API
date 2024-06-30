@@ -14,4 +14,4 @@ const CustomersPage = () => {
   );
 };
 
-export default CustomersPage;
+export default CustomersFormPage;
