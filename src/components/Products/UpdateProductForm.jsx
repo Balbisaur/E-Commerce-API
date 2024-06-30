@@ -28,14 +28,13 @@ const UpdateProductForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      // Validate price as a number
+      // confirming price as a number
       if (isNaN(parseFloat(price))) {
         throw new Error('Price must be a valid number');
       }
 
       await axios.put(`http://localhost:3306/products/${id}`, { name, price });
       alert('Product updated successfully');
-      // Optionally: Redirect to another page after successful update
       history.push('/products');
     } catch (error) {
       console.error('There was an error updating the product!', error);
